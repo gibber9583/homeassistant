@@ -1,0 +1,19 @@
+alias: "Chris Arrive Lights"
+trigger:
+  - platform: state
+    #Chris' iPhone Tracker
+    entity_id: device_tracker.chris
+    from: "not_home"
+    to: "home"
+condition:
+  condition: and
+  conditions:
+    - condition: sun
+      after: sunset
+      after_offset: "-1:00:00"
+    - condition: state
+      entity_id: light.kitchen
+      state: "off"
+action:
+  - service: light.turn_on
+    entity_id: light.kitchen

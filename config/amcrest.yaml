@@ -1,0 +1,6 @@
+    host: 192.168.86.44
+    name: Choo Choo
+    username: admin
+    password: hell0!!!
+    sensors:
+      - motion_detector

@@ -1,0 +1,28 @@
+alias: "Roberta Arrive"
+trigger:
+  - platform: state
+    #Robertas iPhone
+    entity_id: device_tracker.d8a7fc928d9e415095072143d7cef2f2
+    from: "not_home"
+    to: "home"
+action:
+  - service: script.turn_on
+    entity_id: script.unlock_kitchen
+  - service: script.turn_on
+    entity_id: script.say
+    data:
+       variables:
+        where: 'media_player.kitchen'
+        what: 'Roberta is now home'
+  - service: script.turn_on
+    entity_id: script.say
+    data:
+      variables:
+        where: 'media_player.living_room'
+        what: 'Roberta is now home'
+  - service: script.turn_on
+    entity_id: script.say
+    data:
+      variables:
+        where: 'media_player.bedroom'
+        what: 'Roberta is now home'

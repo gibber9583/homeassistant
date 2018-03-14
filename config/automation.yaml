@@ -1,0 +1,6 @@
+- !include automation/chris_arrive_unlock.yaml
+- !include automation/chris_arrive_lights.yaml
+- !include automation/roberta_arrive_unlock.yaml
+- !include automation/roberta_arrive_lights.yaml
+- !include automation/roberta_notify_home.yaml
+- !include automation/restart_hass.yaml

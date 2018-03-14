@@ -1,0 +1,28 @@
+alias: "Notify Home"
+trigger:
+  - platform: state
+    #Chris' Iphone Tracker
+    entity_id: device_tracker.chris
+    from: "not_home"
+    to: "home"
+action:
+  - service: script.turn_on
+    entity_id: script.unlock_kitchen
+  - service: script.turn_on
+    entity_id: script.say
+    data:
+       variables:
+         where: 'media_player.kitchen'
+         what: 'Chris is now home'
+  - service: script.turn_on
+    entity_id: script.say
+    data:
+       variables:
+         where: 'media_player.living_room'
+         what: 'Chris is now home'
+  - service: script.turn_on
+    entity_id: script.say
+    data:
+       variables:
+         where: 'media_player.bedroom'
+         what: 'Chris is now home'

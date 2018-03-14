@@ -1,0 +1,98 @@
+homeassistant:
+  name: Home
+  latitude: !secret latitude
+  longitude: !secret longitude
+  elevation: 18
+  unit_system: imperial
+  time_zone: !secret time_zone
+  customize: !include customize.yaml
+
+zone: !include_dir_list zone
+
+http:
+  api_password: !secret api_password
+  login_attempts_threshold: 5
+
+duckdns:
+  domain: !secret domain
+  access_token: !secret access_token
+
+zwave:
+  usb_path: /dev/ttyACM0
+  polling_interval: 30000
+  #debug: true
+  autoheal: true
+  #config_path: /srv/homeassistant/homeassistant_venv/lib/python3.4/site-packages/libopenzwave-0.3.1-py3.4-linux-armv7l.egg/config
+
+####################################################
+#                                                  #
+#                     Includes             #
+#                                                  #
+####################################################
+
+###  Devices  ###
+config:
+ios:
+camera: !include cameras.yaml
+device_tracker: !include device_trackers.yaml
+light: !include lights.yaml
+media_player: !include media_players.yaml
+sensor: !include sensors.yaml
+# alarm_control_panel: !include alarm_control_panel.yaml
+automation: !include automations.yaml
+group: !include groups.yaml
+climate: !include climate.yaml
+input_boolean: !include input_boolean.yaml
+notify: !include notify.yaml
+remote: !include remote.yaml
+script: !include scripts.yaml
+
+emulated_hue:
+  expose_by_default: false
+  exposed_domains:
+    - media_player
+    - script
+    - light
+
+####################################################
+#                                                  #
+#                     Enables             #
+#                                                  #
+####################################################
+logger:
+history:
+recorder:
+  db_url: !secret recorder_db_url
+#wemo: !include wemo.yaml
+sun:
+conversation:
+logbook:
+frontend:
+nest:
+  client_id: !secret nest_client_id
+  client_secret: !secret nest_client_secret
+hue:
+  bridges:
+    - host: !secret hue_bridge_host
+tts:
+  platform: google
+influxdb:
+  host: !secret influx_db_host 
+alexa:
+  intents:
+    WhereAreWeIntent:
+      speech:
+        type: plaintext
+        text: >
+          {%- if is_state('device_tracker.4f2768cf0b3640738931134d007e8310', 'home') and
+                 is_state('device_tracker.d8a7fc928d9e415095072143d7cef2f2', 'home') -%}
+            You are both home
+          {%- else -%}
+            Roberta is at {{ states("device_tracker.d8a7fc928d9e415095072143d7cef2f2") }}
+            and Chris is at {{ states("device_tracker.4f2768cf0b3640738931134d007e8310") }}
+          {% endif %}
+    UpstairTempIntent:
+      speech:
+        type: plaintext
+        text: >
+            The current temperature upstairs is {{ states.sensor.upstairs_thermostat_temperature.state|round }} degrees with a target of {{ states.sensor.upstairs_thermostat_target.state|round }}. The temperature downstairs is {{ states.sensor.downstairs_thermostat_temperature.state|round }} degrees with a target of {{ states.sensor.downstairs_thermostat_target.state|round }}.

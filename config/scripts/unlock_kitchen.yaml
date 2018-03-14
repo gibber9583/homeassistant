@@ -1,0 +1,5 @@
+sequence:
+  - service: lock.unlock
+    entity_id: lock.kitchen_locked
+  - service: lock.unlock
+    entity_id: lock.kitchen_unlocked  

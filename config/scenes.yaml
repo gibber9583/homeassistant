@@ -1,0 +1,9 @@
+#### scenes.yaml ####
+- name: Bedtime
+  entities:
+    light.bedroom: off
+    light.hue_activate_scene:
+      group_name: Bedroom Lamp
+      scene_name: Relax
+    lock.unlock:
+      entity_id: group.locks

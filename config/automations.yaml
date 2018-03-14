@@ -1,0 +1,312 @@
+- action:
+  - alias: chris_arrive_notification_dining_room
+    data:
+      what: Chris is now home
+      where: media_player.dining_room
+    service: script.say
+  - alias: chris_arrive_notification_master_bedroom
+    data:
+      what: Chris is now home
+      where: media_player.master_bedroom
+    service: script.say
+  alias: Chris - Audio Notify Arrive
+  condition: []
+  id: '1505842292866'
+  trigger:
+  - entity_id: device_tracker.chris
+    from: not_home
+    platform: state
+    to: home
+- action:
+  - alias: chris_arrive_lights_kitchen
+    data:
+      group_name: Kitchen
+      scene_name: Read
+    service: light.hue_activate_scene
+  - alias: chris_arrive_lights_lr_lamps
+    data:
+      group_name: Living Room Lamps
+      scene_name: Read
+    service: light.hue_activate_scene
+  alias: Lights - Turn On When Arrive
+  condition:
+  - condition: state
+    entity_id: sensor.kitchen_dark
+    state: 'True'
+  id: '1505843206247'
+  trigger:
+  - entity_id: device_tracker.chris
+    from: not_home
+    platform: state
+    to: home
+  - entity_id: device_tracker.roberta
+    from: not_home
+    platform: state
+    to: home
+  - entity_id: group.all_devices
+    from: not_home
+    platform: state
+    to: home
+- action:
+  - alias: unlock_kitchen
+    data:
+      entity_id: group.locks
+    service: lock.unlock
+  alias: Lock - Unlock on Arrival
+  condition: []
+  id: '1505843531318'
+  trigger:
+  - entity_id: device_tracker.chris
+    from: not_home
+    platform: state
+    to: home
+  - entity_id: device_tracker.roberta
+    from: not_home
+    platform: state
+    to: home
+  - entity_id: group.all_devices
+    from: not_home
+    platform: state
+    to: home
+- action:
+  - alias: ios_chris_notify
+    data:
+      message: Kitchen Door Unlocked
+    service: notify.ios_chris
+  alias: Chris - iOS Notification
+  condition: []
+  id: '1505845720652'
+  trigger:
+  - entity_id: group.locks
+    from: locked
+    platform: state
+    to: unlocked
+- action:
+  - alias: roberta_arrive_notification_dining_room
+    data:
+      what: Roberta is now home
+      where: media_player.dining_room
+    service: script.say
+  - alias: Roberta_arrive_notification_master_bedroom
+    data:
+      what: Roberta is now home
+      where: media_player.master_bedroom
+    service: script.say
+  alias: Roberta - Audio Notify Arrive
+  condition:
+  - condition: state
+    entity_id: device_tracker.chris
+    state: home
+  id: '15058422928661'
+  trigger:
+  - entity_id: device_tracker.roberta
+    from: not_home
+    platform: state
+    to: home
+- action:
+  - alias: iOS Notify Chris
+    data:
+      message: Roberta has left work
+    service: notify.ios_chris
+  alias: Chris - iOS Notify Roberta Work
+  condition: []
+  id: '1506001833361'
+  trigger:
+  - entity_id: device_tracker.roberta
+    event: leave
+    platform: zone
+    zone: zone.fmc
+- action:
+  - alias: iOS Notify Chris
+    data:
+      message: Roberta has left gym
+    service: notify.ios_chris
+  alias: Chris - iOS Notify Roberta Gym
+  condition: []
+  id: '15060018333611'
+  trigger:
+  - entity_id: device_tracker.roberta
+    event: leave
+    platform: zone
+    zone: zone.gym
+- action:
+  - alias: iOS Notify Chris
+    data:
+      message: Roberta has dropped off Choo
+    service: notify.ios_chris
+  alias: Chris - iOS Notify Roberta Choo Drop Off
+  condition:
+  - before: '11:00:00'
+    condition: time
+  id: '150600183336111'
+  trigger:
+  - entity_id: device_tracker.roberta
+    event: leave
+    platform: zone
+    zone: zone.choo_choo
+- action:
+  - alias: iOS Notify Chris
+    data:
+      message: Roberta has picked up Choo
+    service: notify.ios_chris
+  alias: Chris - iOS Notify Roberta Choo Pick-Up
+  condition:
+  - after: '11:00:00'
+    condition: time
+  id: '1506001833361111'
+  trigger:
+  - entity_id: device_tracker.roberta
+    event: leave
+    platform: zone
+    zone: zone.choo_choo
+- action:
+  - alias: Lights on
+    data:
+      entity_id: switch.fan
+    service: switch.turn_on
+  alias: 'Christmas Lights on '
+  condition: []
+  id: '1511968688634'
+  trigger:
+  - event: sunset
+    offset: '-15'
+    platform: sun
+- action:
+  - alias: Turn off lights
+    data:
+      entity_id: switch.fan
+    service: switch.turn_off
+  alias: Christmas Lights Off
+  condition: []
+  id: '1511968733655'
+  trigger:
+  - at: '23:00'
+    platform: time
+- action:
+  - alias: Turn on lights
+    data:
+      brightness_pct: 95
+      entity_id: light.homeseer_hswd100_wall_dimmer_level
+    service: light.turn_on
+  alias: Zwave - Double Tap Up
+  condition: []
+  id: '1512146585982'
+  trigger:
+  - event_data:
+      scene_data: 3
+      scene_id: 1
+    event_type: zwave.scene_activated
+    platform: event
+- action:
+  - alias: Turn Off Light
+    data:
+      entity_id: light.homeseer_hswd100_wall_dimmer_level
+    service: light.turn_off
+  alias: Zwave - Double Tap - Down
+  condition: []
+  id: '1512151585551'
+  trigger:
+  - event_data:
+      scene_data: 3
+      scene_id: 2
+    event_type: zwave.scene_activated
+    platform: event
+- action:
+  - alias: Turn Off First Floor LIghts
+    data:
+      entity_id: group.first_floor
+    service: light.turn_off
+  - alias: Turn On Hallway
+    data:
+      entity_id: light.hallway
+    service: light.turn_on
+  - alias: Lock Door
+    data:
+      entity_id: group.locks
+    service: lock.lock
+  - alias: Turn off Front Door
+    data:
+      entity_id: light.front_door
+    service: light.turn_off
+  alias: Zwave - Press and Hold Down
+  condition: []
+  id: '1512153031412'
+  trigger:
+  - event_data:
+      scene_data: 2
+      scene_id: 2
+    event_type: zwave.scene_activated
+    platform: event
+- action:
+  - alias: Turn On Light
+    data:
+      brightness_pct: 92
+      entity_id: light.homeseer_hswd100_wall_dimmer_level
+    service: light.turn_on
+  alias: Zwave - Single Tap Up
+  condition: []
+  id: '1512154297722'
+  trigger:
+  - event_data:
+      scene_data: 0
+      scene_id: 1
+    event_type: zwave.scene_activated
+    platform: event
+- action:
+  - alias: Turn off Light
+    data:
+      entity_id: light.homeseer_hswd100_wall_dimmer_level
+    service: light.turn_off
+  alias: Zwave - Single Tap Down
+  condition: []
+  id: '1512154382110'
+  trigger:
+  - event_data:
+      scene_data: 0
+      scene_id: 2
+    event_type: zwave.scene_activated
+    platform: event
+- action:
+  - alias: Lock Back Door
+    data:
+      entity_id: group.locks
+    service: lock.lock
+  alias: Zwave - Triple Tap Down
+  condition: []
+  id: '1512156755511'
+  trigger:
+  - event_data:
+      scene_data: 4
+      scene_id: 2
+    event_type: zwave.scene_activated
+    platform: event
+- action:
+  - alias: Turn on Light
+    data:
+      brightness_pct: 95
+      entity_id: light.homeseer_hswd100_wall_dimmer_level
+    service: light.turn_on
+  alias: Zwave - Triple Tap Up
+  condition: []
+  id: '1512156824938'
+  trigger:
+  - event_data:
+      scene_data: 4
+      scene_id: 1
+    event_type: zwave.scene_activated
+    platform: event
+- action:
+  - data:
+      entity_id: lock.kitchen_lock
+    service: lock.lock
+  alias: Lock - When Group Away
+  condition:
+  - condition: state
+    entity_id: sensor.kitchen_door_sensor
+    state: Closed
+  id: '1520113891403'
+  trigger:
+  - entity_id: group.all_devices
+    from: home
+    platform: state
+    to: not_home

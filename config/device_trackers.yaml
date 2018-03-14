@@ -1,0 +1,6 @@
+  - platform: nmap_tracker
+    interval_seconds: 5
+    consider_home: 1200
+    hosts:
+      - 192.168.86.243
+      - 192.168.86.49

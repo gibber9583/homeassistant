@@ -1,0 +1,76 @@
+c454444db2a1:
+  hide_if_away: false
+  mac: C4:54:44:4D:B2:A1
+  name: c454444db2a1
+  picture:
+  track: false
+  vendor: QUANTA COMPUTER INC.
+
+18b4309ac61b:
+  hide_if_away: false
+  mac: 18:B4:30:9A:C6:1B
+  name: 18b4309ac61b
+  picture:
+  track: false
+  vendor: unknown
+
+18b4302b263e:
+  hide_if_away: false
+  mac: 18:B4:30:2B:26:3E
+  name: 18b4302b263e
+  picture:
+  track: false
+  vendor: Nest Labs Inc.
+
+b8e93797331c:
+  hide_if_away: false
+  mac: B8:E9:37:97:33:1C
+  name: b8e93797331c
+  picture:
+  track: false
+  vendor: unknown
+
+Chris:
+  hide_if_away: false
+  icon:
+  mac: B0:19:C6:D9:D9:0B
+  name: 247Brown
+  picture: /local/chris.png
+  track: true
+  vendor:
+
+149182b37d43:
+  hide_if_away: false
+  icon:
+  mac: 14:91:82:B3:7D:43
+  name: 149182b37d43
+  picture:
+  track: false
+  vendor: unknown
+
+a48d3be2b2d9:
+  hide_if_away: false
+  icon:
+  mac: A4:8D:3B:E2:B2:D9
+  name: a48d3be2b2d9
+  picture:
+  track: false
+  vendor: unknown
+
+roberta:
+  hide_if_away: false
+  icon:
+  mac: A4:B8:05:99:DD:84
+  name: roberta
+  picture:
+  track: true
+  vendor:
+
+amazon97faccca0lan:
+  hide_if_away: false
+  icon:
+  mac: 88:71:E5:27:2B:36
+  name: amazon-97faccca0.lan
+  picture:
+  track: false
+  vendor: Amazon Technologies Inc.

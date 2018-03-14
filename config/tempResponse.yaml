@@ -1,0 +1,11 @@
+          >
+          {{ [
+          {{ "The current temperature upstairs is" +  states.sensor.upstairs_thermostat_temperature.state|round + "degrees. Happy now?" }},
+          {{ "The current temperature upstairs is" + states.sensor.upstairs_thermostat_temperature.state|round + "degrees. Can I go back to doing nothing?" }},
+          {{ "The current temperature upstairs is" + states.sensor.upstairs_thermostat_temperature.state|round + "degrees. Now get off my ass." }},
+          {{ "The current temperature upstairs is" + states.sensor.upstairs_thermostat_temperature.state|round  + "degrees. Will that be all?" }},
+          {{ "The current temperature upstairs is" + states.sensor.upstairs_thermostat_temperature.state|round  + "degrees. Is that warm enough for Roberta?" }},
+          {{ "The current temperature upstairs is" + states.sensor.upstairs_thermostat_temperature.state|round  + "degrees. You lazy ass." }},
+          {{ "The current temperature upstairs is" + states.sensor.upstairs_thermostat_temperature.state|round  + "degrees. And go fuck yourself" }},
+          {{ "The current temperature upstairs is" + states.sensor.upstairs_thermostat_temperature.state|round + "degrees. That's it. I quit." }}
+          ] | random }}

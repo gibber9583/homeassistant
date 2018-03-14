@@ -1,0 +1,127 @@
+binary_sensor.bedroom_nest_protect_online:
+  hidden: true
+binary_sensor.downstairs_thermostat_fan:
+  hidden: true
+binary_sensor.downstairs_thermostat_has_leaf:
+  hidden: true
+binary_sensor.downstairs_thermostat_is_locked:
+  hidden: true
+binary_sensor.downstairs_thermostat_is_using_emergency_heat:
+  hidden: true
+binary_sensor.downstairs_thermostat_online:
+  hidden: true
+binary_sensor.hallway_nest_protect_online:
+  hidden: true
+binary_sensor.living_room_nest_protect_online:
+  hidden: true
+binary_sensor.master_bedroom_nest_protect_online:
+  hidden: true
+binary_sensor.office_nest_protect_online:
+  hidden: true
+binary_sensor.upstairs_thermostat_fan:
+  hidden: true
+binary_sensor.upstairs_thermostat_has_leaf:
+  hidden: true
+binary_sensor.upstairs_thermostat_is_locked:
+  hidden: true
+binary_sensor.upstairs_thermostat_is_using_emergency_heat:
+  hidden: true
+binary_sensor.upstairs_thermostat_online:
+  hidden: true
+sensor.bedroom_nest_protect_battery_health:
+  hidden: true
+sensor.bedroom_nest_protect_co_status:
+  hidden: true
+sensor.bedroom_nest_protect_smoke_status:
+  hidden: true
+sensor.hallway_nest_protect_battery_health:
+  hidden: true
+sensor.hallway_nest_protect_co_status:
+  hidden: true
+sensor.hallway_nest_protect_smoke_status:
+  hidden: true
+sensor.living_room_nest_protect_battery_health:
+  hidden: true
+sensor.living_room_nest_protect_co_status:
+  hidden: true
+sensor.living_room_nest_protect_smoke_status:
+  hidden: true
+sensor.master_bedroom_nest_protect_battery_health:
+  hidden: true
+sensor.master_bedroom_nest_protect_co_status:
+  hidden: true
+sensor.master_bedroom_nest_protect_smoke_status:
+  hidden: true
+sensor.office_nest_protect_battery_health:
+  hidden: true
+sensor.office_nest_protect_co_status:
+  hidden: true
+sensor.office_nest_protect_smoke_status:
+  hidden: true
+sensor.downstairs_thermostat_hvac_state:
+  hidden: true
+sensor.downstairs_thermostat_operation_mode:
+  hidden: true
+sensor.downstairs_thermostat_target:
+  hidden: true
+sensor.downstairs_thermostat_temperature:
+  hidden: true
+sensor.upstairs_thermostat_hvac_state:
+  hidden: true
+sensor.upstairs_thermostat_operation_mode:
+  hidden: true
+sensor.upstairs_thermostat_target:
+  hidden: true
+sensor.upstairs_thermostat_temperature:
+  hidden: true
+device_tracker.Chris:
+  friendly_name: Chris
+device_tracker.d8a7fc928d9e415095072143d7cef2f2:
+  friendly_name: Roberta
+light.kitchen:
+  friendly_name: Kitchen Ceiling
+light.bedroom:
+  friendly_name: Bedroom Ceiling
+light.living_room:
+  friendly_name: Living Room Ceiling
+lock.kitchen_lock:
+  friendly_name: Kitchen Lock
+sensor.living_room_hub:
+  icon: mdi:theater
+group.kitchen_tidy:
+  friendly_name: Kitchen
+group.kitchen_full:
+  friendly_name: Kitchen
+group.living_room_tidy:
+  friendly_name: Living Room
+group.living_room_full:
+  friendly_name: Living Room
+group.lounge_tidy:
+  friendly_name: Lounge
+group.master_bedroom_tidy:
+  friendly_name: Master Bedroom
+group.hallway_tidy:
+  friendly_name: Hallway
+group.hallway_full:
+  friendly_name: Hallway
+device_tracker.roberta:
+  friendly_name: Roberta
+media_player.vizio_smartcast:
+  friendly_name: Bedroom TV
+  emulated_hue: true
+  emulated_hue_name: Bedroom TV
+script.1506346856399:
+  friendly_name: bedtime
+  emulated_hue: true
+  emulated_hue_name: bedtime
+switch.fan:
+  friendly_name: Christmas Tree
+  icon: mdi:pine-tree
+light.homeseer_hswd100_wall_dimmer_level:
+  friendly_name: Front Door
+  emulated_hue: true
+  emulated_hue_name: Front Door
+sensor.living_room_door_sensor:
+  friendly_name: Living Room Door
+sensor.kitchen_door_sensor:
+  friendly_name: Kitchen Door

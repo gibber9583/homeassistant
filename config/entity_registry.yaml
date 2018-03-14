@@ -1,0 +1,352 @@
+light.br_1:
+  name:
+  platform: hue
+  unique_id: 00:17:88:01:10:53:41:c4-0b
+light.br_2:
+  name:
+  platform: hue
+  unique_id: 00:17:88:01:10:47:c6:85-0b
+light.br_3:
+  name:
+  platform: hue
+  unique_id: 00:17:88:01:00:e9:e3:1b-0b
+light.br_4:
+  name:
+  platform: hue
+  unique_id: 00:17:88:01:00:e9:df:07-0b
+light.br_5:
+  name:
+  platform: hue
+  unique_id: 00:17:88:01:00:f4:e4:91-0b
+light.pendant_1:
+  name:
+  platform: hue
+  unique_id: 00:17:88:01:10:45:a1:da-0b
+light.l_1:
+  name:
+  platform: hue
+  unique_id: 00:17:88:01:10:54:6d:07-0b
+light.pendant_2:
+  name:
+  platform: hue
+  unique_id: 00:17:88:01:10:45:b6:a5-0b
+light.l_2:
+  name:
+  platform: hue
+  unique_id: 00:17:88:01:10:54:6b:6c-0b
+light.kc_1:
+  name:
+  platform: hue
+  unique_id: 00:17:88:01:10:51:92:41-0b
+light.lr_lamp_1:
+  name:
+  platform: hue
+  unique_id: 00:17:88:01:10:28:37:c0-0b
+light.kc_3:
+  name:
+  platform: hue
+  unique_id: 00:17:88:01:10:51:8c:81-0b
+light.br_6:
+  name:
+  platform: hue
+  unique_id: 00:17:88:01:10:4b:06:b7-0b
+light.kc_4:
+  name:
+  platform: hue
+  unique_id: 00:17:88:01:10:51:8e:39-0b
+light.lrc_1:
+  name:
+  platform: hue
+  unique_id: 00:17:88:01:10:51:90:8a-0b
+light.kc_5:
+  name:
+  platform: hue
+  unique_id: 00:17:88:01:10:3d:1c:83-0b
+light.lrc_2:
+  name:
+  platform: hue
+  unique_id: 00:17:88:01:10:51:95:52-0b
+light.kc_6:
+  name:
+  platform: hue
+  unique_id: 00:17:88:01:10:3d:44:28-0b
+light.lrc_3:
+  name:
+  platform: hue
+  unique_id: 00:17:88:01:10:3d:41:95-0b
+light.brc_2:
+  name:
+  platform: hue
+  unique_id: 00:17:88:01:10:40:ab:f4-0b
+light.lrc_4:
+  name:
+  platform: hue
+  unique_id: 00:17:88:01:10:51:8e:68-0b
+light.lr_lamp_2:
+  name:
+  platform: hue
+  unique_id: 00:17:88:01:10:28:39:55-0b
+light.lrc_5:
+  name:
+  platform: hue
+  unique_id: 00:17:88:01:10:51:95:9d-0b
+light.strip_light:
+  name:
+  platform: hue
+  unique_id: 00:17:88:01:01:1c:88:1b-0b
+light.brc_1:
+  name:
+  platform: hue
+  unique_id: 00:17:88:01:10:40:9d:e0-0b
+light.lrc_6:
+  name:
+  platform: hue
+  unique_id: 00:17:88:01:10:51:94:da-0b
+light.kc_2:
+  name:
+  platform: hue
+  unique_id: 00:17:88:01:10:51:8e:6f-0b
+light.hw2:
+  name:
+  platform: hue
+  unique_id: 00:17:88:01:02:45:96:7c-0b
+light.hw1:
+  name:
+  platform: hue
+  unique_id: 00:17:88:01:02:4b:65:1f-0b
+light.hw3:
+  name:
+  platform: hue
+  unique_id: 00:17:88:01:02:4b:6a:b7-0b
+light.hw4:
+  name:
+  platform: hue
+  unique_id: 00:17:88:01:02:45:a8:a9-0b
+light.hws1:
+  name:
+  platform: hue
+  unique_id: 00:17:88:01:02:45:a0:2b-0b
+light.hws2:
+  name:
+  platform: hue
+  unique_id: 00:17:88:01:02:45:89:13-0b
+light.br_lamp:
+  name:
+  platform: hue
+  unique_id: 00:17:88:01:10:26:f0:46-0b
+climate.downstairs:
+  name:
+  platform: nest
+  unique_id: EeG4ZRoWWI2u4nL2NI4NSk4M9IaxlCNT
+climate.upstairs:
+  name:
+  platform: nest
+  unique_id: EeG4ZRoWWI3oll9WIoUxBE4M9IaxlCNT
+media_player.master_bedroom:
+  name:
+  platform: sonos
+  unique_id: RINCON_B8E937E5907E01400
+media_player.dining_room:
+  name:
+  platform: sonos
+  unique_id: RINCON_B8E937D0121801400
+media_player.family_room:
+  name:
+  platform: sonos
+  unique_id: RINCON_B8E93797331C01400
+sensor.christophers_ipad_battery_level:
+  name:
+  platform: ios
+  unique_id: level_christophers_ipad
+sensor.iphone_battery_level:
+  name:
+  platform: ios
+  unique_id: level_Roberta
+sensor.chris_battery_level:
+  name:
+  platform: ios
+  unique_id: level_Chris
+sensor.chris_battery_state:
+  name:
+  platform: ios
+  unique_id: state_Chris
+sensor.christophers_ipad_battery_state:
+  name:
+  platform: ios
+  unique_id: state_christophers_ipad
+sensor.iphone_battery_state:
+  name:
+  platform: ios
+  unique_id: state_Roberta
+light.level:
+  name:
+  platform: zwave
+  unique_id: 3-72057594093076481
+sensor.alarm_type:
+  name:
+  platform: zwave
+  unique_id: 4-72057594111082497
+sensor.alarm_level:
+  name:
+  platform: zwave
+  unique_id: 4-72057594111082513
+binary_sensor.hank_doorwindow_sensor_sensor:
+  name:
+  platform: zwave
+  unique_id: 4-72057594110017536
+sensor.hank_doorwindow_sensor_sourcenodeid:
+  name:
+  platform: zwave
+  unique_id: 4-72057594111082529
+sensor.hank_doorwindow_sensor_access_control:
+  name:
+  platform: zwave
+  unique_id: 4-72057594111082641
+sensor.hank_doorwindow_sensor_burglar:
+  name:
+  platform: zwave
+  unique_id: 4-72057594111082657
+sensor.alarm_type_2:
+  name:
+  platform: zwave
+  unique_id: 5-72057594127859713
+sensor.alarm_level_2:
+  name:
+  platform: zwave
+  unique_id: 5-72057594127859729
+binary_sensor.hank_hkzwdws01_doorwindow_sensor_sensor:
+  name:
+  platform: zwave
+  unique_id: 5-72057594126794752
+sensor.hank_hkzwdws01_doorwindow_sensor_sourcenodeid:
+  name:
+  platform: zwave
+  unique_id: 5-72057594127859745
+sensor.hank_hkzwdws01_doorwindow_sensor_access_control:
+  name:
+  platform: zwave
+  unique_id: 5-72057594127859857
+sensor.hank_hkzwdws01_doorwindow_sensor_burglar:
+  name:
+  platform: zwave
+  unique_id: 5-72057594127859873
+sensor.alarm_type_3:
+  name:
+  platform: zwave
+  unique_id: 6-72057594144636929
+sensor.alarm_level_3:
+  name:
+  platform: zwave
+  unique_id: 6-72057594144636945
+binary_sensor.sensor:
+  name:
+  platform: zwave
+  unique_id: 6-72057594143571968
+sensor.vision_zp3102_pir_motion_sensor_temperature:
+  name:
+  platform: zwave
+  unique_id: 6-72057594143588370
+sensor.vision_zp3102_pir_motion_sensor_sourcenodeid:
+  name:
+  platform: zwave
+  unique_id: 6-72057594144636961
+sensor.vision_zp3102_pir_motion_sensor_burglar:
+  name:
+  platform: zwave
+  unique_id: 6-72057594144637089
+sensor.vision_zp3102_pir_motion_sensor_system:
+  name:
+  platform: zwave
+  unique_id: 6-72057594144637121
+sensor.vision_zp3102_pir_motion_sensor_homehealth:
+  name:
+  platform: zwave
+  unique_id: 6-72057594144637185
+sensor.vision_zp3102_pir_motion_sensor_appliance:
+  name:
+  platform: zwave
+  unique_id: 6-72057594144637169
+sensor.vision_zp3102_pir_motion_sensor_emergency:
+  name:
+  platform: zwave
+  unique_id: 6-72057594144637137
+sensor.alarm_type_4:
+  name:
+  platform: zwave
+  unique_id: 9-72057594194968577
+sensor.alarm_level_4:
+  name:
+  platform: zwave
+  unique_id: 9-72057594194968593
+binary_sensor.hank_hkzwdws01_doorwindow_sensor_sensor_2:
+  name:
+  platform: zwave
+  unique_id: 9-72057594193903616
+sensor.hank_hkzwdws01_doorwindow_sensor_sourcenodeid_2:
+  name:
+  platform: zwave
+  unique_id: 9-72057594194968609
+sensor.hank_hkzwdws01_doorwindow_sensor_access_control_2:
+  name:
+  platform: zwave
+  unique_id: 9-72057594194968721
+sensor.hank_hkzwdws01_doorwindow_sensor_burglar_2:
+  name:
+  platform: zwave
+  unique_id: 9-72057594194968737
+sensor.alarm_type_5:
+  name:
+  platform: zwave
+  unique_id: 10-72057594211745793
+sensor.alarm_level_5:
+  name:
+  platform: zwave
+  unique_id: 10-72057594211745809
+binary_sensor.hank_hkzwdws01_doorwindow_sensor_sensor_3:
+  name:
+  platform: zwave
+  unique_id: 10-72057594210680832
+sensor.hank_hkzwdws01_doorwindow_sensor_sourcenodeid_3:
+  name:
+  platform: zwave
+  unique_id: 10-72057594211745825
+sensor.hank_hkzwdws01_doorwindow_sensor_access_control_3:
+  name:
+  platform: zwave
+  unique_id: 10-72057594211745937
+sensor.hank_hkzwdws01_doorwindow_sensor_burglar_3:
+  name:
+  platform: zwave
+  unique_id: 10-72057594211745953
+sensor.vision_zp3102_pir_motion_sensor_clock:
+  name:
+  platform: zwave
+  unique_id: 6-72057594144637153
+lock.kitchen_lock:
+  name:
+  platform: zwave
+  unique_id: 12-72057594245054464
+sensor.schlage_be468_touchscreen_deadbolt_alarm_type:
+  name:
+  platform: zwave
+  unique_id: 12-72057594245300225
+sensor.schlage_be468_touchscreen_deadbolt_alarm_level:
+  name:
+  platform: zwave
+  unique_id: 12-72057594245300241
+sensor.schlage_be468_touchscreen_deadbolt_sourcenodeid:
+  name:
+  platform: zwave
+  unique_id: 12-72057594245300257
+sensor.schlage_be468_touchscreen_deadbolt_access_control:
+  name:
+  platform: zwave
+  unique_id: 12-72057594245300369
+sensor.schlage_be468_touchscreen_deadbolt_power_management:
+  name:
+  platform: zwave
+  unique_id: 12-72057594245300401
+sensor.schlage_be468_touchscreen_deadbolt_system:
+  name:
+  platform: zwave
+  unique_id: 12-72057594245300417

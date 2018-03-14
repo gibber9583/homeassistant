@@ -1,0 +1,47 @@
+say:
+  sequence:
+  - service: media_player.sonos_snapshot
+    data_template:
+      entity_id: '{{ where }}'
+  - service: tts.google_say
+    data_template:
+      entity_id: '{{ where }}'
+      message: '{{ what }}'
+  - delay: 00:00:03
+  - service: media_player.sonos_restore
+    data_template:
+      entity_id: '{{ where }}'
+unlock_kitchen:
+  sequence:
+  - service: lock.unlock
+    entity_id: lock.kitchen_locked
+  - service: lock.unlock
+    entity_id: lock.kitchen_unlocked
+lock_kitchen:
+  sequence:
+  - service: lock.lock
+    entity_id: lock.schlage_be468cam619_touchscreen_deadbolt_locked_2_0
+'1506346856399':
+  alias: bedtime
+  sequence:
+  - alias: turn off bedroom
+    data:
+      entity_id: light.bedroom
+    service: light.turn_off
+  - alias: Turn on bedroom lamp
+    data:
+      group_name: Bedroom Lamp
+      scene_name: Relax
+    service: light.hue_activate_scene
+  - alias: Lock Door
+    data:
+      entity_id: group.locks
+    service: lock.lock
+  - alias: turn on fan
+    data:
+      entity_id: switch.fan
+    service: switch.turn_on
+  - alias: turn on tv
+    data:
+      entity_id: media_player.vizio_smartcast
+    service: media_player.turn_on

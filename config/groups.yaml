@@ -1,0 +1,270 @@
+###   VIEWS   ###
+default_view:
+  view: yes
+  icon: mdi:home
+  entities:
+   - device_tracker.Chris
+   - device_tracker.roberta
+   - group.kitchen_tidy
+   - group.living_room_tidy
+   - group.lounge_tidy
+   - group.hallway_tidy
+   - group.stairs
+   - group.master_bedroom_tidy
+Kitchen:
+  name: Kitchen
+  view: yes
+  #icon: mdi:food
+  entities:
+    - group.kitchen_full
+    - group.kitchen_security
+Living Room:
+  name: Living
+  view: yes
+  #icon: mdi:television-guide
+  entities:
+    - group.living_room_full
+    - group.living_room_security
+Office:
+  name: Office
+  view: yes
+  #icon: mdi:desktop-mac
+  entities:
+    - group.lounge
+Hallway:
+  name: Hallway
+  view: yes
+  #icon: mdi:hotel
+  entities:
+    - group.hallway_full
+    - group.stairs
+Bedroom:
+  name: Bedroom
+  view: yes
+  #icon: mdi:hotel
+  entities:
+    - group.master_bedroom
+    - group.master_bedroom_security
+Security:
+  name: Security
+  view: yes
+  icon: mdi:security
+  entities:
+    - group.kitchen_security
+    - group.living_room_security
+    - group.master_bedroom_security
+environment:
+  name: environment
+  view: yes
+  icon: mdi:thermometer-lines
+  entities:
+    - group.temperature
+media:
+  name: media
+  view: yes
+  icon: mdi:play-circle-outline
+  entities:
+    - group.audio    
+Configuration:
+  name: Config
+  view: yes
+  icon: mdi:settings
+  entities:
+    - group.automations
+    - group.scripts
+    - group.people
+    - group.locations
+    - group.locks
+    - input_boolean.restart_hass
+###   GROUPS    ###
+
+Kitchen Full:
+  control: hidden
+  entities:
+   - light.kitchen
+   - light.kc_1
+   - light.kc_2
+   - light.kc_3
+   - light.kc_4
+   - light.kc_5
+   - light.kc_6
+   - light.cabinets
+   - light.dining
+   - light.pendant_1
+   - light.pendant_2
+   - media_player.dining_room
+Kitchen Tidy:
+  control: hidden
+  entities:
+   - light.kitchen
+   - light.cabinets
+   - light.dining
+   - sensor.motion_kitchen
+   - sensor.basement_door_sensor
+   - sensor.kitchen_door_sensor
+   - lock.kitchen_lock
+   - media_player.dining_room
+Kitchen Security:
+  control: hidden
+  entities:
+   - lock.kitchen_lock
+   - sensor.kitchen_lock_battery  
+   - sensor.kitchen_lux
+   - sensor.kitchen_temperature
+   - sensor.motion_kitchen
+   - sensor.kitchen_door_sensor
+   - sensor.hank_hkzwdws01_doorwindow_sensor_battery_level   
+   - sensor.basement_door_sensor
+   - sensor.basement_door_sensor_battery
+Living Room Full:
+  control: hidden
+  entities:
+   - sensor.living_room_hub
+   - light.living_room
+   - light.lrc_1
+   - light.lrc_2
+   - light.lrc_3
+   - light.lrc_4
+   - light.lrc_5
+   - light.lrc_6
+   - light.living_room_lamps
+   - light.lr_lamp_1
+   - light.lr_lamp_2
+   - media_player.family_room
+Living Room Security:
+  control: hidden
+  entities:
+   - camera.living_room
+   - sensor.living_room_door_sensor
+   - sensor.living_room_door_sensor_battery 
+Living Room Tidy:
+  control: hidden
+  entities:
+   - camera.living_room
+   - light.living_room
+   - light.living_room_lamps
+   - light.homeseer_hswd100_wall_dimmer_level
+   - sensor.living_room_door_sensor
+   - media_player.family_room
+   - media_player.living_room_kodi
+Lounge:
+  control: hidden
+  entities:
+   - light.lounge
+   - light.l_1
+   - light.l_2
+   - media_player.lounge_kodi
+Lounge Tidy:
+  control: hidden
+  entities:
+   - light.lounge
+   - media_player.lounge_kodi
+Master Bedroom:
+  control: hidden
+  entities:
+   - light.bedroom
+   - light.br_1
+   - light.br_2
+   - light.br_3
+   - light.br_4
+   - light.br_5
+   - light.br_6
+   - light.bedroom_lamp
+   - switch.fan
+   - light.bedroom_closet
+   - light.brc_1
+   - light.brc_2
+   - media_player.vizio_smartcast
+   - media_player.master_bedroom
+   - media_player.bedroom_kodi
+Master Bedroom Tidy:
+  control: hidden
+  entities:
+   - light.bedroom
+   - light.bedroom_lamp
+   - switch.fan
+   - light.bedroom_closet
+   - sensor.motion_bedroom
+   - media_player.vizio_smartcast
+   - media_player.master_bedroom
+   - media_player.bedroom_kodi
+Master Bedroom Security:
+  control: hidden
+  entities:
+   - sensor.motion_bedroom
+   - sensor.motion_bedroom_battery   
+Hallway Full:
+  control: hidden
+  entities:
+   - light.hallway
+   - light.hw1
+   - light.hw2
+   - light.hw3
+   - light.hw4
+Hallway Tidy:
+  control: hidden
+  entities:
+   - light.hallway
+Stairs:
+  control: hidden
+  entities:
+   - light.stairs
+Temperature:
+   - climate.downstairs
+   - sensor.downstairs_thermostat_humidity
+   - climate.upstairs
+   - sensor.upstairs_thermostat_humidity
+   - sun.sun
+Audio:
+   - media_player.dining_room
+   - media_player.family_room
+   - media_player.living_room_kodi
+#   - sensor.living_room_kodi_daily_stats
+   - media_player.master_bedroom
+   - media_player.bedroom_kodi
+#   - sensor.bedroom_kodi_daily_stats
+   - media_player.lounge_kodi
+#   - sensor.lounge_kodi_daily_stats
+Automations:
+   - automation.roberta_arrive
+   - automation.chris_arrive
+Scripts:
+   - script.say
+   - script.lock_kitchen
+   - script.unlock_kitchen
+Locations:
+   - zone.home
+   - zone.work
+   - zone.gym
+Locks:
+   - group.all_locks
+   - lock.schlage_be468cam619_touchscreen_deadbolt_locked
+   - lock.schlage_be468cam619_touchscreen_deadbolt_locked_2_0
+   - lock.kitchen_locked
+   - lock.kitchen_unlocked
+   - lock.kitchen_lock
+   - sensor.kitchen_lock_battery
+People:
+   - device_tracker.Chris
+   - device_tracker.roberta
+First Floor:
+   - light.kitchen
+   - light.cabinets
+   - light.dining
+   - light.living_room
+   - light.living_room_lamps 
+#Video Stats:
+#   - sensor.living_room_kodi_daily_stats
+#   - sensor.bedroom_kodi_daily_stats
+#   - sensor.lounge_kodi_daily_stats
+#Audio Stats:
+#   - sensor.living_room_sonos_daily_stats
+#   - sensor.bedroom_sonos_daily_stats
+#   - sensor.kitchen_sonos_daily_stats
+#Light Stats:
+#   - sensor.living_room_light_daily_stats
+#   - sensor.bedroom_light_daily_stats
+#   - sensor.lounge_light_daily_stats
+#   - sensor.kitchen_light_daily_stats
+#Lock Stats:
+#   - sensor.lock_daily_stats

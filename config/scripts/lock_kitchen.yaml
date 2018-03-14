@@ -1,0 +1,3 @@
+sequence:
+  - service: lock.lock
+    entity_id: lock.schlage_be468cam619_touchscreen_deadbolt_locked_2_0

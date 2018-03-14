@@ -1,0 +1,20 @@
+####MEDIA PLAYERS####
+- platform: kodi
+  host: 192.168.86.39
+  port: 8080
+  enable_websocket: false
+  name: Lounge Kodi
+- platform: kodi
+  host: 192.168.86.64
+  port: 8080
+  enable_websocket: false
+  name: Living Room Kodi
+- platform: kodi
+  host: 192.168.86.21
+  port: 8080
+  enable_websocket: false
+  name: Bedroom Kodi
+- platform: sonos
+#- platform: vizio
+#  host: 192.168.86.43
+#  access_token: Zw7y31vkbq
